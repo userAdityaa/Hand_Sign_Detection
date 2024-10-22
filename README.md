@@ -3,6 +3,15 @@ In this method, images from a video are passed through a CNN, which extracts fea
 
 A 3D Convolutional Network (Conv3D) extends the concept of 2D convolutions by adding a third dimension. In 2D convolutions, the filter moves in two directions (x and y), while in 3D convolutions, it moves in three directions (x, y, and z). The input to Conv3D is a video, which can be thought of as a sequence of 30 RGB images. If each image has a size of 100x100x3, the video becomes a 4D tensor of size 100x100x30x3, or equivalently, (100x100x30)x3, where 3 represents the number of channels. Just like a 2D convolution uses a (fxf)xc filter (with f being the filter size and c the number of channels), a 3D convolution uses a (fxfxf)xc cubic filter. This cubic filter moves through the three dimensions of the (100x100x30) tensor, convolving across all channels.
 
+## Five Different Gestures
+```
+* Thumbs up:  Increase the volume
+* Thumbs down: Decrease the volume
+* Left swipe: 'Jump' backwards 10 seconds
+* Right swipe: 'Jump' forward 10 seconds  
+* Stop: Pause the movie
+```
+
 ## Steps
 - Load the training and validation datasets.
 - Set the hyperparameters, including batch size and the number of epochs.
